@@ -1,43 +1,20 @@
-import Smoothie from "@/components/Smoothie";
-import supabase from "@/lib/supabase";
-import { useEffect, useState } from "react";
-import { SmoothieType } from "types/collections";
+import { Button } from "@/components/ui/button";
+import { PlusCircleIcon } from "lucide-react";
+import React from "react";
 
-const Home = () => {
-  const [fetchError, setFetchError] = useState<string | null>(null);
-  const [smoothies, setSmothies] = useState<SmoothieType[]>([]);
-
-  useEffect(() => {
-    const fetchSmoothies = async () => {
-      const { data, error } = await supabase.from("smoothies").select("*");
-      if (error) {
-        setFetchError("impossible de charger les données");
-        setFetchError(null);
-        console.log(error);
-      }
-      if (data) {
-        console.log(data);
-
-        setSmothies(data);
-        setFetchError(null);
-      }
-    };
-
-    fetchSmoothies();
-  }, []);
-
+const Home: React.FC = () => {
   return (
     <div>
-      <h1>Home Page</h1>
-      <p>Welcome to the home page!</p>
-      {fetchError && <p>{fetchError}</p>}
-      {smoothies && (
-        <div>
-          {smoothies.map((smoothie) => {
-            return <Smoothie smoothie={smoothie} key={smoothie.id} />;
-          })}
-        </div>
-      )}
+      <div className="flex items-center justify-between ">
+        <h1 className="text-3xl sm:text-5xl font-bold">Liste des Taches</h1>
+        <Button className="h-10 capitalize font-bold space-x-1 px-2 sm:px-3">
+          <kbd className="pointer-events-none hidden h-6 select-none items-center gap-1 rounded border px-1.5 font-mono text-[12px] font-medium opacity-100 sm:flex">
+            <span className="text-xl">⌘</span>A
+          </kbd>
+          <span className="hidden sm:block">créer une tache</span>
+          <PlusCircleIcon className="h-6 w-6 block  sm:hidden" />
+        </Button>
+      </div>
     </div>
   );
 };
