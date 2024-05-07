@@ -7,37 +7,9 @@ const Header = () => {
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="max-w-5xl mx-auto container flex h-14  items-center">
           <div className="mr-4 hidden md:flex">
-            <a className="mr-6 flex items-center space-x-2" href="/">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 256 256"
-                className="h-6 w-6"
-              >
-                <rect width={256} height={256} fill="none" />
-                <line
-                  x1={208}
-                  y1={128}
-                  x2={128}
-                  y2={208}
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={16}
-                />
-                <line
-                  x1={192}
-                  y1={40}
-                  x2={40}
-                  y2={192}
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={16}
-                />
-              </svg>
-              <span className="hidden font-bold sm:inline-block">TATASH</span>
+            <a className="mr-6 flex items-center" href="/">
+              <span className="font-black text-primary block">T</span>
+              <span className="hidden font-black sm:inline-block">TATASH</span>
             </a>
             <nav className="flex items-center gap-4 text-sm lg:gap-6">
               <a
@@ -90,9 +62,11 @@ const Header = () => {
           <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
             <div className="w-full flex-1 md:w-auto md:flex-none">
               <Button className="inline-flex items-center whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input hover:bg-accent hover:text-accent-foreground px-4 py-2 relative h-8 w-full justify-start rounded-[0.5rem] bg-background text-sm font-normal text-muted-foreground shadow-none sm:pr-12 md:w-40 lg:w-64">
-                <span className="hidden lg:inline-flex">Search Task...</span>
-                <span className="inline-flex lg:hidden">Search...</span>
-                <kbd className="pointer-events-none absolute right-[0.3rem] top-[0.3rem] hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
+                <span className="hidden lg:inline-flex">
+                  Rechercher une Tache...
+                </span>
+                <span className="inline-flex lg:hidden">Recherche...</span>
+                <kbd className="pointer-events-none absolute right-[0.3rem] top-[0.3rem] hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-md font-medium opacity-100 sm:flex">
                   <span className="text-xs">⌘</span>K
                 </kbd>
               </Button>
