@@ -1,8 +1,37 @@
-# React + Vite
+## 🛠️ Template React + Vite + Supabase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Description
 
-Currently, two official plugins are available:
+Ce template a été créé pour accompagner ma vidéo tutoriel sur YouTube. Il vous permet de démarrer rapidement un projet React avec Vite et Supabase. Utilisez ce template pour suivre les étapes expliquées dans la vidéo et créer votre propre application en un rien de temps !
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Chaîne YouTube:** [Rauche Acho](https://www.youtube.com/@raucheacho)
+
+N'oubliez pas de **vous abonner, partager, et liker** la vidéo, ça me fait chaud au cœur ! ❤️
+
+### Instructions
+
+1. **Clonez le projet** :
+
+   ```bash
+   git clone https://github.com/votre-repo.git
+   cd votre-repo
+   ```
+
+2. **Installez les dépendances** :
+
+   ```bash
+   npm install
+   ```
+
+3. **Lancez le serveur de développement** :
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Suivez la vidéo** pour configurer Supabase et intégrer les fonctionnalités expliquées.
+
+### Liens Utiles
+
+- [Vidéo tutoriel sur YouTube](https://www.youtube.com/@raucheacho)
+- [Documentation Supabase](https://supabase.com/docs)
