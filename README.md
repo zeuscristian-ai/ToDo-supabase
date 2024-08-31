@@ -13,8 +13,8 @@ N'oubliez pas de **vous abonner, partager, et liker** la vidéo, ça me fait cha
 1. **Clonez le projet** :
 
    ```bash
-   git clone https://github.com/votre-repo.git
-   cd votre-repo
+   git clone https://github.com/supabase_todo.git
+   cd supabase_todo
    ```
 
 2. **Installez les dépendances** :
