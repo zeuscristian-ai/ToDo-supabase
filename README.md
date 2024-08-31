@@ -13,7 +13,7 @@ N'oubliez pas de **vous abonner, partager, et liker** la vidéo, ça me fait cha
 1. **Clonez le projet** :
 
    ```bash
-   git clone https://github.com/supabase_todo.git
+   git clone https://github.com/raucheacho/supabase_todo.git
    cd supabase_todo
    ```
 
