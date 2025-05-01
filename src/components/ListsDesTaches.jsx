@@ -22,7 +22,7 @@ const ListeDesTaches = () => {
 
   return (
     <>
-      {taches ? (
+      {taches.length ? (
         <ul className="mt-6 space-y-5">
           {taches.map((tache) => (
             <Tache tache={tache} key={tache.id} />
