@@ -31,7 +31,7 @@ const Header = () => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://github.com/raucheacho"
+                href="https://github.com/zeuscristian-ai"
               >
                 <div className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 py-2 w-9 px-0">
                   <svg viewBox="0 0 438.549 438.549" className="h-4 w-4">
@@ -41,24 +41,6 @@ const Header = () => {
                     />
                   </svg>
                   <span className="sr-only">GitHub</span>
-                </div>
-              </a>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://twitter.com/raucheacho"
-              >
-                <div className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 py-2 w-9 px-0">
-                  <svg
-                    className="h-3 w-3 fill-current"
-                    height={23}
-                    viewBox="0 0 1200 1227"
-                    width={23}
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" />
-                  </svg>
-                  <span className="sr-only">Twitter</span>
                 </div>
               </a>
               <ModeToggle />
