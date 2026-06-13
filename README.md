@@ -1,20 +1,21 @@
-## 🛠️ Template React + Vite + Supabase
+# 📝 ZeusToDo
 
-### Description
+Application de gestion de tâches construite avec **React + Vite + Supabase**.
 
-Ce template a été créé pour accompagner ma vidéo tutoriel sur YouTube. Il vous permet de démarrer rapidement un projet React avec Vite et Supabase. Utilisez ce template pour suivre les étapes expliquées dans la vidéo et créer votre propre application en un rien de temps !
+## Fonctionnalités
 
-- **Chaîne YouTube:** [Rauche Acho](https://www.youtube.com/@raucheacho)
+- Lister les tâches depuis Supabase
+- Ajouter une tâche
+- Marquer une tâche comme terminée (ou la reprendre)
+- Supprimer une tâche
 
-N'oubliez pas de **vous abonner, partager, et liker** la vidéo, ça me fait chaud au cœur ! ❤️
-
-### Instructions
+## Installation
 
 1. **Clonez le projet** :
 
    ```bash
-   git clone https://github.com/raucheacho/supabase_todo.git
-   cd supabase_todo
+   git clone https://github.com/zeuscristian-ai/ToDo-supabase.git
+   cd ToDo-supabase
    ```
 
 2. **Installez les dépendances** :
@@ -23,15 +24,20 @@ N'oubliez pas de **vous abonner, partager, et liker** la vidéo, ça me fait cha
    npm install
    ```
 
-3. **Lancez le serveur de développement** :
+3. **Configurez les variables d'environnement** : créez un fichier `.env` à la racine (voir `.env.example`) :
+
+   ```
+   VITE_SUPABASE_URL=https://votre-projet.supabase.co
+   VITE_SUPABASE_ANON_KEY=votre_cle_publishable
+   ```
+
+4. **Lancez le serveur de développement** :
 
    ```bash
    npm run dev
    ```
 
-4. **Suivez la vidéo** pour configurer Supabase et intégrer les fonctionnalités expliquées.
+## Liens utiles
 
-### Liens Utiles
-
-- [Vidéo tutoriel sur YouTube](https://www.youtube.com/@raucheacho)
 - [Documentation Supabase](https://supabase.com/docs)
+- [Documentation Vite](https://vitejs.dev)
