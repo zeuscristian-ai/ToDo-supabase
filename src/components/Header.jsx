@@ -11,8 +11,8 @@ const Header = () => {
             to="/"
             className="flex items-center text-[15px] font-semibold tracking-tight"
           >
-            <span className="text-[hsl(210_100%_55%)]">S</span>
-            <span>upatache</span>
+            <span className="text-[hsl(210_100%_55%)]">Zeus</span>
+            <span>ToDo</span>
           </Link>
 
           <nav className="ml-8 flex items-center gap-6 text-[12px] text-white/80">
