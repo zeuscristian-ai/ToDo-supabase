@@ -7,16 +7,16 @@ const Footer = () => {
         <span>Créer avec</span>
         <HeartIcon className="h-5 w-5 text-foreground" />
         <a
-          href="https://twitter.com/raucheacho"
+          href="https://github.com/zeuscristian-ai"
           target="_blank"
           rel="noreferrer"
           className="font-medium underline underline-offset-4"
         >
-          Rauche Acho
+          zeuscristian-ai
         </a>
         . Le code est sur{/* */}{" "}
         <a
-          href="https://github.com/raucheacho"
+          href="https://github.com/zeuscristian-ai/ToDo-supabase"
           target="_blank"
           rel="noreferrer"
           className="font-medium underline underline-offset-4"
