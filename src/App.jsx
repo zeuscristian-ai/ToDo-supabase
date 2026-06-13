@@ -8,7 +8,7 @@ import Ajouter from "./pages/Ajouter";
 import Details from "./pages/Details";
 
 const App = () => (
-  <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+  <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>

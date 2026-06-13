@@ -22,8 +22,13 @@ const TachesOK = () => {
   ];
   return (
     <>
-      <div className="flex items-center justify-between ">
-        <h1 className="text-xl sm:text-3xl font-bold">Taches terminées</h1>
+      <div className="flex flex-col gap-2">
+        <h1 className="text-[40px] leading-[1.1] font-semibold tracking-tight">
+          Tâches terminées
+        </h1>
+        <p className="text-[21px] text-muted-foreground tracking-tight">
+          Le travail accompli, rien que ça.
+        </p>
       </div>
       <div>
         {taches ? (

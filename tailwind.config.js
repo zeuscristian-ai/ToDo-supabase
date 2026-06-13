@@ -52,10 +52,26 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      fontFamily: {
+        sans: [
+          "Inter",
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "sans-serif",
+        ],
+      },
+      letterSpacing: {
+        tight: "-0.022em",
+      },
+      boxShadow: {
+        // The single Apple "product" shadow — for imagery resting on a surface.
+        product: "rgba(0, 0, 0, 0.22) 3px 5px 30px 0",
+      },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        lg: "var(--radius)", // 18px
+        md: "0.6875rem", // 11px — pearl capsule
+        sm: "0.5rem", // 8px — utility
       },
       keyframes: {
         "accordion-down": {

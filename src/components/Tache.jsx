@@ -13,52 +13,48 @@ const Tache = ({ tache, onSupprimer, onBasculer }) => {
   return (
     <li
       className={cn(
-        "flex flex-col items-start gap-2 rounded-lg border p-3 text-left text-sm transition-all max-w-xl",
-        isOk ? "bg-background" : "border-gray-300"
+        // Apple store-utility-card: white, hairline border, 18px radius, no shadow
+        "flex flex-col items-start gap-4 rounded-lg border border-border bg-card p-6 text-left max-w-xl transition-colors",
+        isOk && "bg-secondary"
       )}
     >
-      <div className="flex w-full flex-col gap-1">
-        <div className="flex items-center">
-          <div className="flex items-center gap-2">
-            <p
-              className={cn(
-                "font-semibold text-xs md:text-base line-clamp-1",
-                isOk && "line-through text-foreground"
-              )}
-            >
-              {tache.titre}
-            </p>
-            <span
-              className={cn(
-                "flex h-2 w-2 rounded-full",
-                !isOk ? "bg-green-600" : "bg-accent"
-              )}
-            />
-          </div>
-          <div className="ml-auto text-xs text-muted-foreground line-clamp-1">
+      <div className="flex w-full flex-col gap-1.5">
+        <div className="flex items-center gap-3">
+          <span
+            className={cn(
+              "flex h-2 w-2 shrink-0 rounded-full",
+              isOk ? "bg-muted-foreground/40" : "bg-primary"
+            )}
+          />
+          <p
+            className={cn(
+              "text-[17px] font-semibold tracking-tight line-clamp-1",
+              isOk && "line-through text-muted-foreground"
+            )}
+          >
+            {tache.titre}
+          </p>
+          <span className="ml-auto shrink-0 text-[13px] text-muted-foreground line-clamp-1">
             {date}
-          </div>
+          </span>
         </div>
       </div>
 
       <p
         className={cn(
-          "line-clamp-2 text-xs md:text-sm",
-          isOk ? "line-through text-foreground" : "text-primary"
+          "line-clamp-2 text-[15px] leading-relaxed",
+          isOk ? "text-muted-foreground line-through" : "text-foreground/80"
         )}
       >
         {tache.description}
       </p>
+
       <div className="flex items-center gap-2">
         <Button
-          variant="outline"
+          variant={isOk ? "default" : "outline"}
           size="sm"
-          onClick={() => onBasculer(tache)}
-          className={cn(
-            "flex items-center gap-1",
-            isOk &&
-              "bg-primary hover:bg-primary text-white text-xs md:text-base"
-          )}
+          onClick={() => onBasculer?.(tache)}
+          className="flex items-center gap-1.5"
         >
           <CheckCircle className="h-4 w-4" />
           {isOk ? "Reprendre" : "Terminée"}
@@ -66,7 +62,7 @@ const Tache = ({ tache, onSupprimer, onBasculer }) => {
         <Button
           variant="ghost"
           size="sm"
-          className="flex items-center gap-1 text-xs md:text-base"
+          className="flex items-center gap-1.5 text-muted-foreground"
         >
           <Edit className="h-4 w-4" />
           Modifier
@@ -74,8 +70,8 @@ const Tache = ({ tache, onSupprimer, onBasculer }) => {
         <Button
           variant="ghost"
           size="sm"
-          onClick={() => onSupprimer(tache.id)}
-          className="flex items-center gap-1 hover:bg-destructive text-xs md:text-base"
+          onClick={() => onSupprimer?.(tache.id)}
+          className="flex items-center gap-1.5 text-muted-foreground hover:bg-destructive/10 hover:text-destructive"
         >
           <Trash className="h-4 w-4" />
           Supprimer

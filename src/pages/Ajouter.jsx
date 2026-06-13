@@ -3,8 +3,13 @@ import { TacheForm } from "../components/TacheForm";
 const Ajouter = () => {
   return (
     <>
-      <div className="flex items-center justify-between">
-        <h1 className="text-xl sm:text-3xl font-bold">Ajouter des Taches</h1>
+      <div className="flex flex-col gap-2">
+        <h1 className="text-[40px] leading-[1.1] font-semibold tracking-tight">
+          Ajouter une tâche
+        </h1>
+        <p className="text-[21px] text-muted-foreground tracking-tight">
+          Un titre, une description, et c'est noté.
+        </p>
       </div>
       <div className="mt-10 max-w-xl">
         <TacheForm />

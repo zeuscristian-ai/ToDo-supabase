@@ -44,7 +44,10 @@ export function TacheForm({ defaultValues = {} }) {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
       <div className="space-y-2">
-        <label htmlFor="titre" className="block  font-medium text-foreground">
+        <label
+          htmlFor="titre"
+          className="block text-[14px] font-semibold tracking-tight text-foreground"
+        >
           Titre
         </label>
         <Input id="titre" {...register("titre", { required: true })} />
@@ -56,7 +59,7 @@ export function TacheForm({ defaultValues = {} }) {
       <div className="space-y-2">
         <label
           htmlFor="description"
-          className="block  font-medium text-foreground"
+          className="block text-[14px] font-semibold tracking-tight text-foreground"
         >
           Description
         </label>
