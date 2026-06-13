@@ -1,8 +1,11 @@
 "use client";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "./ui/textarea";
+import { supabase } from "../supabase/supabaseClient";
 
 export function TacheForm({ defaultValues = {} }) {
   // Use defaultValues from props if provided
@@ -14,7 +17,29 @@ export function TacheForm({ defaultValues = {} }) {
     defaultValues, // Set default values for the form
   });
 
-  const onSubmit = (data) => console.log(data);
+  const navigate = useNavigate();
+  const [enregistrement, setEnregistrement] = useState(false);
+  const [erreur, setErreur] = useState(null);
+
+  const onSubmit = async (data) => {
+    setEnregistrement(true);
+    setErreur(null);
+
+    const { error } = await supabase.from("taches").insert([
+      {
+        titre: data.titre,
+        description: data.description,
+      },
+    ]);
+
+    setEnregistrement(false);
+
+    if (error) {
+      setErreur(error.message);
+    } else {
+      navigate("/"); // Retour a l'accueil apres l'ajout
+    }
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
@@ -44,7 +69,11 @@ export function TacheForm({ defaultValues = {} }) {
         )}
       </div>
 
-      <Button type="submit">Ajouter une tâche</Button>
+      {erreur && <p className="text-red-500">Erreur : {erreur}</p>}
+
+      <Button type="submit" disabled={enregistrement}>
+        {enregistrement ? "Ajout en cours..." : "Ajouter une tâche"}
+      </Button>
     </form>
   );
 }
