@@ -25,6 +25,34 @@ const ListeDesTaches = () => {
     chargerTaches();
   }, []);
 
+  // Supprimer une tache de la base puis de l'affichage
+  const supprimerTache = async (id) => {
+    const { error } = await supabase.from("taches").delete().eq("id", id);
+    if (error) {
+      setErreur(error.message);
+    } else {
+      setTaches((actuelles) => actuelles.filter((t) => t.id !== id));
+    }
+  };
+
+  // Marquer une tache comme terminee / non terminee
+  const basculerStatut = async (tache) => {
+    const nouveauStatut = !tache.status;
+    const { error } = await supabase
+      .from("taches")
+      .update({ status: nouveauStatut })
+      .eq("id", tache.id);
+    if (error) {
+      setErreur(error.message);
+    } else {
+      setTaches((actuelles) =>
+        actuelles.map((t) =>
+          t.id === tache.id ? { ...t, status: nouveauStatut } : t
+        )
+      );
+    }
+  };
+
   if (chargement) {
     return <p className="text-xl mt-8">Chargement... ⏳</p>;
   }
@@ -38,7 +66,12 @@ const ListeDesTaches = () => {
       {taches.length ? (
         <ul className="mt-6 space-y-5">
           {taches.map((tache) => (
-            <Tache tache={tache} key={tache.id} />
+            <Tache
+              tache={tache}
+              key={tache.id}
+              onSupprimer={supprimerTache}
+              onBasculer={basculerStatut}
+            />
           ))}
         </ul>
       ) : (

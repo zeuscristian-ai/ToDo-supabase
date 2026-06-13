@@ -4,7 +4,7 @@ import { cn } from "../lib/utils";
 import { formatDistanceToNow } from "date-fns";
 import { fr } from "date-fns/locale";
 
-const Tache = ({ tache }) => {
+const Tache = ({ tache, onSupprimer, onBasculer }) => {
   const isOk = tache.status;
   const date = formatDistanceToNow(new Date(tache.created_at), {
     addSuffix: true,
@@ -53,6 +53,7 @@ const Tache = ({ tache }) => {
         <Button
           variant="outline"
           size="sm"
+          onClick={() => onBasculer(tache)}
           className={cn(
             "flex items-center gap-1",
             isOk &&
@@ -60,7 +61,7 @@ const Tache = ({ tache }) => {
           )}
         >
           <CheckCircle className="h-4 w-4" />
-          Terminée
+          {isOk ? "Reprendre" : "Terminée"}
         </Button>
         <Button
           variant="ghost"
@@ -73,6 +74,7 @@ const Tache = ({ tache }) => {
         <Button
           variant="ghost"
           size="sm"
+          onClick={() => onSupprimer(tache.id)}
           className="flex items-center gap-1 hover:bg-destructive text-xs md:text-base"
         >
           <Trash className="h-4 w-4" />
