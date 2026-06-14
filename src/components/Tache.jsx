@@ -14,7 +14,7 @@ const Tache = ({ tache, onSupprimer, onBasculer }) => {
     <li
       className={cn(
         // Apple store-utility-card: white, hairline border, 18px radius, no shadow
-        "flex flex-col items-start gap-4 rounded-lg border border-border bg-card p-6 text-left max-w-xl transition-colors",
+        "flex flex-col items-start gap-4 rounded-lg border border-border bg-card p-5 text-left w-full max-w-xl transition-colors sm:p-6",
         isOk && "bg-secondary"
       )}
     >
@@ -49,7 +49,7 @@ const Tache = ({ tache, onSupprimer, onBasculer }) => {
         {tache.description}
       </p>
 
-      <div className="flex items-center gap-2">
+      <div className="flex flex-wrap items-center gap-x-1 gap-y-2">
         <Button
           variant={isOk ? "default" : "outline"}
           size="sm"

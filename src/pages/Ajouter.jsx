@@ -4,10 +4,10 @@ const Ajouter = () => {
   return (
     <>
       <div className="flex flex-col gap-2">
-        <h1 className="text-[40px] leading-[1.1] font-semibold tracking-tight">
+        <h1 className="text-[28px] sm:text-[40px] leading-[1.1] font-semibold tracking-tight">
           Ajouter une tâche
         </h1>
-        <p className="text-[21px] text-muted-foreground tracking-tight">
+        <p className="text-[17px] sm:text-[21px] text-muted-foreground tracking-tight">
           Un titre, une description, et c'est noté.
         </p>
       </div>

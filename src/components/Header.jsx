@@ -6,16 +6,16 @@ const Header = () => {
     <>
       {/* Global nav: ultra-thin true-black bar, the only pure black on the page */}
       <header className="sticky top-0 z-50 w-full bg-black text-white">
-        <div className="max-w-5xl mx-auto flex h-11 items-center px-6">
+        <div className="max-w-5xl mx-auto flex h-11 items-center px-4 sm:px-6">
           <Link
             to="/"
-            className="flex items-center text-[15px] font-semibold tracking-tight"
+            className="flex shrink-0 items-center text-[15px] font-semibold tracking-tight"
           >
             <span className="text-[hsl(210_100%_55%)]">Zeus</span>
             <span>ToDo</span>
           </Link>
 
-          <nav className="ml-8 flex items-center gap-6 text-[12px] text-white/80">
+          <nav className="ml-4 flex items-center gap-4 text-[12px] text-white/80 sm:ml-8 sm:gap-6">
             <Link className="transition-colors hover:text-white" to="/taches-ok">
               Tâches OK
             </Link>
@@ -24,7 +24,7 @@ const Header = () => {
             </Link>
           </nav>
 
-          <div className="ml-auto flex items-center gap-3">
+          <div className="ml-auto flex shrink-0 items-center gap-3 pl-3">
             <a
               target="_blank"
               rel="noreferrer"
@@ -46,13 +46,13 @@ const Header = () => {
 
       {/* Sub-nav: frosted parchment strip with the category name + primary CTA */}
       <div className="sticky top-11 z-40 w-full border-b border-border/60 bg-background/80 backdrop-blur-xl backdrop-saturate-150">
-        <div className="max-w-5xl mx-auto flex h-[52px] items-center px-6">
-          <span className="text-[21px] font-semibold tracking-tight">
+        <div className="max-w-5xl mx-auto flex h-[52px] items-center gap-3 px-4 sm:px-6">
+          <span className="text-[18px] font-semibold tracking-tight sm:text-[21px]">
             Mes tâches
           </span>
           <Link
             to="/ajouter"
-            className="ml-auto inline-flex h-8 items-center rounded-full bg-primary px-4 text-[14px] font-normal text-primary-foreground transition-transform duration-200 ease-out active:scale-95"
+            className="ml-auto inline-flex h-8 shrink-0 items-center rounded-full bg-primary px-4 text-[13px] font-normal text-primary-foreground transition-transform duration-200 ease-out active:scale-95 sm:text-[14px]"
           >
             Ajouter une tâche
           </Link>

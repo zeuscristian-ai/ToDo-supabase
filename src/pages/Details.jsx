@@ -4,7 +4,7 @@ const Details = () => {
   return (
     <>
       <div className="flex flex-col gap-2">
-        <h1 className="text-[40px] leading-[1.1] font-semibold tracking-tight">
+        <h1 className="text-[28px] sm:text-[40px] leading-[1.1] font-semibold tracking-tight">
           Détails de la tâche
         </h1>
       </div>
